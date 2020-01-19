@@ -76,6 +76,6 @@ private ["_trader"];
 	_trader allowDamage false;
 	_trader enableSimulation false;
 } forEach [
-["Gangsta_merc7", [9910.58,5432.17,0.00143433],106.201]
+["Gangsta_merc7", [9910.58,5432.17,0.00143433],106]
 ];
 processInitCommands;
