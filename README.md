@@ -49,10 +49,10 @@ Lets start with the easy part, server sided
 1. Open your dayz_server\traders\chernarus11.sqf
 
 Anywhere in the middle, add this
-
+```
 //Sandford and son Salvage
     ["Gangsta_merc7", [9910.58,5432.17,0.00143433],106.201],
-
+```
    
 2. Still in the dayz_server folder, put the sanford.sqf from the download in the objects folder.  If you don't have the objects folder create one.
 
@@ -62,14 +62,14 @@ So the sanford.sqf should be in a folder path like this. dayz_server\objects\san
 
 Look for this
  
-
+```
 spawn_vehicles = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\spawn_vehicles.sqf";
-
+```
 Add this bellow
  
-
+```
 execVM "\z\addons\dayz_server\objects\sanford.sqf";
-
+```
 Thats it for the server sided
 
  
@@ -80,27 +80,27 @@ Now for the mission
 
 At the top you will see a list of traders,
 add this, but make sure if its your last entry, there shouldn't be a comma at the end
-
+```
 "Gangsta_merc7",
-
+```
 2. still in server_traders.sqf
 
 Add this at the bottom
  
-
+```
 //Sanford and Son Trader
 menu_Gangsta_merc7 = [
     [["Sanford And Son Salvage",666]],
     [],
     "neutral"
 ];
-
+```
 Save and close the file.
 
 4. Put the sanford folder from the download in your custom folder in your mission. If you dont have a custom folder create one.
 
 5. Open your description.ext
-
+```
 Look for
 
 class CfgSounds
@@ -114,16 +114,16 @@ class sanford
 		sound[] = {custom\sanford\sanford.ogg,1.0,1};
 		titles[] = {};
 	};
-
+```
 6.Open your mission.sqm
 
 look for
-
+```
 class Sensors
-
+```
 add this block of code, before the class sensors closing bracket.
 Pay attention to the class item6. They need to be in order and you will need to adjust the items6 to items 7 right bellow class sensors also.
-
+```
 class Item6
 		{
 			position[]={9910.58,0,5432.17}; 
@@ -143,7 +143,7 @@ class Item6
 		};
 
  
-
+```
 Alright the easy part is done lol
 
 Now is the time to configure your prices for the trader.
